@@ -12,7 +12,8 @@
 #pull data from API according to user's request
 #display data for user 
 
-require 'pry'
+Search.destroy_all
+
 require 'rest-client'
 require 'json'
 require_relative '../config/environments/env_setup.rb'
@@ -20,14 +21,16 @@ require_relative '../config/environments/env_setup.rb'
 #API key for Cooper Hewitt
 token = ENV["token"]
 
-#user search by location
-location_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&location=' + user_input + '&page=1&per_page=100'
-#user search by medium
-medium_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&medium=' + user_input + '&page=1&per_page=100'
-#user search by person (artist)
-artist_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&person=' + user_input + '&page=1&per_page=100'
-#user search by title
-title_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.people.getObjects&access_token=' + token + '&title=' + user_input
+# #user search by location
+# location_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&location=' + user_input + '&page=1&per_page=100'
+# #user search by medium
+# medium_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&medium=' + user_input + '&page=1&per_page=100'
+# #user search by person (artist)
+# artist_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&person=' + user_input + '&page=1&per_page=100'
+# #user search by title
+# title_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.people.getObjects&access_token=' + token + '&title=' + user_input
 
-binding.pry
-puts 'hello'
+Search.create(name: "location")
+Search.create(name: "medium")
+Search.create(name: "artist")
+Search.create(name: "title")

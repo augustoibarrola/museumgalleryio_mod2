@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'searches#new'
   get '/search', to: 'searches#new'
-  get '/search', to: 'searches#show'
+  post '/search', to: 'searches#show'
 end

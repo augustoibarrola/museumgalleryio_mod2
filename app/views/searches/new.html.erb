@@ -1,7 +1,10 @@
-<h1>Welcome to Cooper Hewitt</h1>
-<h3>Please enter a request</h3>
+<h1>Welcome to the Cooper Hewitt Collection Searcher!</h1>
+<h3>Please enter a request by media</h3>
 <%= form_tag("/search", method: "post") do %>
-    <%= label_tag(:q, "") %>
-    <%= text_field_tag(:q) %>
-    <%= submit_tag('search') %>
+  <%= label_tag(:q, "") %>
+  <%= text_field_tag(:q) %>
+
+  <%= select_tag :search_id, options_from_collection_for_select(Search.all, :id, :name, params[:search_id]) %>
+
+  <%= submit_tag("Search") %>
 <% end %>
