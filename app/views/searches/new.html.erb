@@ -1,4 +1,9 @@
 <h1>Welcome to the Cooper Hewitt Collection Searcher!</h1>
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+
 <h3>Please enter a request by media</h3>
 <%= form_tag("/search", method: "post") do %>
   <%= label_tag(:q, "") %>

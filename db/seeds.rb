@@ -13,13 +13,15 @@
 #display data for user 
 
 Search.destroy_all
+Museum.destroy_all
+User.destroy_all
 
-require 'rest-client'
-require 'json'
-require_relative '../config/environments/env_setup.rb'
+# require 'rest-client'
+# require 'json'
+# require_relative '../config/environments/env_setup.rb'
 
 #API key for Cooper Hewitt
-token = ENV["token"]
+#token = ENV["token"]
 
 # #user search by location
 # location_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.objects&access_token=' + token + '&location=' + user_input + '&page=1&per_page=100'
@@ -30,7 +32,10 @@ token = ENV["token"]
 # #user search by title
 # title_url = 'https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.people.getObjects&access_token=' + token + '&title=' + user_input
 
+#created for search types
 Search.create(name: "location")
 Search.create(name: "medium")
 Search.create(name: "artist")
 Search.create(name: "title")
+
+
