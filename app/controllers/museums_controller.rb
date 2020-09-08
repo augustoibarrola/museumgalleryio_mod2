@@ -1,2 +1,0 @@
-class MuseumsController < ApplicationController
-end

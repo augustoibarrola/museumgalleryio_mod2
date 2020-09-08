@@ -12,28 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_09_08_191029) do
 
-  create_table "artists", force: :cascade do |t|
-    t.string "name"
-    t.string "date"
-    t.text "biography"
-    t.integer "museum_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["museum_id"], name: "index_artists_on_museum_id"
-  end
-
-  create_table "arts", force: :cascade do |t|
-    t.string "title"
-    t.date "date"
-    t.string "medium"
-    t.string "object"
-    t.string "image"
-    t.integer "artist_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["artist_id"], name: "index_arts_on_artist_id"
-  end
-
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.integer "user_id", null: false
@@ -42,15 +20,6 @@ ActiveRecord::Schema.define(version: 2020_09_08_191029) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_art_id"], name: "index_comments_on_user_art_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
-  end
-
-  create_table "museums", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.text "bio"
-    t.string "website"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "searches", force: :cascade do |t|
@@ -79,8 +48,6 @@ ActiveRecord::Schema.define(version: 2020_09_08_191029) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "artists", "museums"
-  add_foreign_key "arts", "artists"
   add_foreign_key "comments", "user_arts"
   add_foreign_key "comments", "users"
   add_foreign_key "user_arts", "arts"

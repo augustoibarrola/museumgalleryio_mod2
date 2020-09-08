@@ -1,2 +1,0 @@
-class ArtsController < ApplicationController
-end
