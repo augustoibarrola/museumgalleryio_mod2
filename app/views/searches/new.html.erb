@@ -1,0 +1,7 @@
+<h1>Welcome to Cooper Hewitt</h1>
+<h3>Please enter a request</h3>
+<%= form_tag("/search", method: "post") do %>
+    <%= label_tag(:q, "") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag('search') %>
+<% end %>
