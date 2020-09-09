@@ -3,3 +3,8 @@
 <h2><%= @user.name  %></h2>
 <p class="user-bio"> <%= @user.bio %> </p>
 <h3>Your Favorites</h3>
+<div class="user-favorites">
+    <% @user.favorites.each do |image| %>
+        <img src="<%= image["image"]%>" alt="Image of <%= image["title"] %>" class="user-favorite">
+    <% end %>
+</div>
