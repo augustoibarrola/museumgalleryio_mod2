@@ -10,11 +10,10 @@ class SessionsController < ApplicationController
 
         # Authenticate a user by their password
         if user && user.authenticate(params[:session][:password])
-            byebug
             session[:user_id] = user.id
             redirect_to user_path(user)
         else 
-            flash[:error] = "Username or Password Incorrect"
+            flash[:error] = "Username or Password Incorrect 😨 "
             redirect_to new_login_path
         end  
     end
