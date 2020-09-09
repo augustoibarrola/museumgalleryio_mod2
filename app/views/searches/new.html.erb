@@ -4,7 +4,7 @@
   <%= flash[:error] %>
 <% end %>
 
-<h3>Please enter a request by media</h3>
+<h3>Please enter a request by the options below</h3>
 <%= form_tag("/search", method: "post") do %>
   <%= label_tag(:q, "") %>
   <%= text_field_tag(:q) %>

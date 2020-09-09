@@ -1,5 +1,3 @@
-gem 'dotenv-rails', :groups => [:development, :test]
-
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -25,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 
-
+gem 'dotenv-rails'
 gem 'require_all'
 gem 'rest-client'
 
