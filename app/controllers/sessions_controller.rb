@@ -1,3 +1,4 @@
+
 class SessionsController < ApplicationController
     skip_before_action :authorized, only: [:new, :log_in]
     
@@ -10,9 +11,11 @@ class SessionsController < ApplicationController
             u.email = auth['info']['email']
             u.profile_picture = auth['info']['image']
         end
-        session[:user_id] = @user.id
 
-       redirect_to user_path(session[:user_id])
+        binding.pry
+        session[:user_id] = @user.id
+        
+        redirect_to user_path(@user)
     end
 
     def login
