@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
         @current_user = User.find_by(id: session[:user_id])
     end
 
+    #logged_in_user sets @current_user to whoever is signed in at the moment. 
+
     def authorized
         if !logged_in_user
             redirect_to '/'
