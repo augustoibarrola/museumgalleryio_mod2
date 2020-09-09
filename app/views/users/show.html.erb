@@ -5,6 +5,8 @@
 <h3>Your Favorites</h3>
 <div class="user-favorites">
     <% @user.favorites.each do |image| %>
-        <img src="<%= image["image"]%>" alt="Image of <%= image["title"] %>" class="user-favorite">
+        <a href=<%= user_art_path(image) %>>
+            <img src="<%= image["image"]%>">
+        </a>
     <% end %>
 </div>

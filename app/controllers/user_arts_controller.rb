@@ -1,5 +1,9 @@
 class UserArtsController < ApplicationController
 
+    def show
+        @user_art = UserArt.find(params[:id])
+    end
+
     def new
     @art_data = {
         "image" => params["image"],
