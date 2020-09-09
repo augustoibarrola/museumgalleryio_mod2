@@ -7,3 +7,24 @@
 
 <br>
 <h3> Comments </h3>
+<% if @user_art.comments.empty? %>
+    <p>No Comments Yet :(</p>
+<% else %>
+    <% @user_art.comments.each do |comment| %>
+        <p> <%= link_to comment.user.name, view_other_path(comment.user) %> <%= comment.content %> </p>    
+    <% end %>
+<% end %>
+
+<% if @user_art.user != @current_user %>
+    <%= form_for @comment do |f| %>
+        <%= f.label "Write your comment here" %>
+        <br>
+        <%= f.text_area :content %>
+        <br>
+
+        <%= f.hidden_field :user_id, value: @current_user.id %>
+        <%= f.hidden_field :user_art_id, value: @user_art.id %>
+
+        <%= f.submit "Create!" %>
+    <% end %>
+<% end %>

@@ -2,6 +2,7 @@ class UserArtsController < ApplicationController
 
     def show
         @user_art = UserArt.find(params[:id])
+        @comment = Comment.new
     end
 
     def new

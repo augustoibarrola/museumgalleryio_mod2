@@ -1,7 +1,7 @@
 <h1> <%= @user.name  %> </h1>
 <img src="<%= (url_for(@user.profile_picture)) %>" alt="<%= @user.name %> Profile Pic" class="profile-picture" width="700" height="600">
 <p class="user-bio"> <%= @user.bio %> </p>
-<h3>Their Favorites</h3>
+<h3>Favorites</h3>
 <div class="user-favorites">
     <% @user.favorites.each do |image| %>
         <a href=<%= user_art_path(image) %>>

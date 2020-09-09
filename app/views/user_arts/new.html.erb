@@ -17,10 +17,6 @@
     <%= f.hidden_field :image, value: @art_data["image"] %>
     <%= f.hidden_field :title, value: @art_data["title"] %>
     <%= f.hidden_field :url_link, value: @art_data["url_link"] %>
-    
-
-    <%# need to change below once created login and sessions%>
-    <%# f.hidden_field :user_id, value: User.first.id %>
 
     <%= f.submit "Create!" %>
 <% end %>
