@@ -1,10 +1,10 @@
 <%# Use profile picute class for css later%>
-<img src="<%= @user.profile_picture %>" alt="<%= @user.name %> Profile Pic" class="profile-picture" width="700" height="600">
-<h2><%= @user.name  %></h2>
-<p class="user-bio"> <%= @user.bio %> </p>
+<img src="<%= @current_user.profile_picture %>" alt="<%= @current_user.name %> Profile Pic" class="profile-picture" width="700" height="600">
+<h2><%= @current_user.name  %></h2>
+<p class="user-bio"> <%= @current_user.bio %> </p>
 <h3>Your Favorites</h3>
 <div class="user-favorites">
-    <% @user.favorites.each do |image| %>
+    <% @current_user.favorites.each do |image| %>
         <a href=<%= user_art_path(image) %>>
             <img src="<%= image["image"]%>">
         </a>

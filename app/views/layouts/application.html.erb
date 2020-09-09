@@ -11,12 +11,12 @@
 
   <body>
     <ul>
+      <li> <%# button_to "Your Profile", user_path(@current_user), method: :get %> </li>
       <li><%= button_to "Log In", new_login_path, method: :get %> </li>
       <li><%= button_to "Sign Up", new_user_path, method: :get %> </li>
       <li> <%= button_to "Log Out", logout_path, method: :delete %> </li>
       <li> <%= button_to "Find Favorites", root_path, method: :get %> </li>
       <li> <%= button_to "Discover", users_path, method: :get %> </li>
-      <li> <%= button_to "Your Provile", user_path(@current_user), method: :get %> </li>
     </ul>
   <br>
   <hr>
