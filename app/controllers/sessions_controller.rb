@@ -1,15 +1,16 @@
 class SessionsController < ApplicationController
-    skip_before_action :authorized, only: [:new, :log_in]
+    skip_before_action :authorized, only: [:new, :login]
     
     def new
     
     end
 
     def login
-        user = User.find_by(name: params[:sessions][:name])
+        user = User.find_by(email: params[:session][:email])
 
-            # Authenticate a user by their password
+        # Authenticate a user by their password
         if user && user.authenticate(params[:session][:password])
+            byebug
             session[:user_id] = user.id
             redirect_to user_path(user)
         else 
