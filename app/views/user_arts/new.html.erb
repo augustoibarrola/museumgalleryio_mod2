@@ -1,1 +1,26 @@
 <h1> Create a Favorite </h1>
+
+<%# Use profile picute class for css later%>
+<img src="<%= @art_data["image"] %>" alt="<%= @art_data["title"] %>" class="art_image" width="700" height="600">
+
+<h4><%= @art_data["title"] %> </h4>
+<a href=<%= @art_data["url_link"] %>> More Info </a>
+
+<br>
+<br>
+<%= form_for @user_art do |f| %>
+    <%= f.label "Write your blurb here" %>
+    <br>
+    <%= f.text_area :blurb %>
+    <br>
+
+    <%= f.hidden_field :image, value: @art_data["image"] %>
+    <%= f.hidden_field :title, value: @art_data["title"] %>
+    <%= f.hidden_field :url_link, value: @art_data["url_link"] %>
+    
+
+    <%# need to change below once created login and sessions%>
+    <%= f.hidden_field :user_id, value: User.first.id %>
+
+    <%= f.submit "Create!" %>
+<% end %>
