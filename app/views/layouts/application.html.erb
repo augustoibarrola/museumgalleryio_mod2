@@ -10,14 +10,6 @@
   </head>
 
   <body>
-<<<<<<< HEAD
-  <%= button_to "Log In", new_login_path, method: :get %><br>
-  <%= button_to "Sign Up", new_user_path, method: :get %><br>
-  <%= button_to "Log Out", logout_path, method: :delete %>
-  <%#= button_to "Log in with Facebook!", auth_facebook_callback_path, method: :get %>
-  <%= link_to('Log in with Facebook!', '/auth/facebook')  %>
-
-=======
     <ul>
       <li> <%# button_to "Your Profile", user_path(@current_user), method: :get %> </li>
       <li><%= button_to "Log In", new_login_path, method: :get %> </li>
@@ -26,7 +18,6 @@
       <li> <%= button_to "Find Favorites", root_path, method: :get %> </li>
       <li> <%= button_to "Discover", users_path, method: :get %> </li>
     </ul>
->>>>>>> master
   <br>
   <hr>
     <%= yield %>

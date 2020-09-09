@@ -19,11 +19,7 @@ class SessionsController < ApplicationController
     end
 
     def login
-<<<<<<< HEAD
-        user = User.find_by(email: params[:sessions][:email])
-=======
         user = User.find_by(email: params[:session][:email])
->>>>>>> master
 
         # Authenticate a user by their password
         if user && user.authenticate(params[:session][:password])
