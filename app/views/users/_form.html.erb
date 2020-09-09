@@ -1,0 +1,28 @@
+<% if flash[:errors] %>
+    <% flash[:errors].each do |e| %>
+    <%= e %>
+    <% end %>
+<% end %>
+
+<%= form_for @user do |u| %>
+    <%= u.label :name %>
+    <%= u.text_field :name %><br>
+    <br>
+    <%= u.label :email %>
+    <%= u.text_field :email %><br>
+    <br>
+    <%= u.label :bio %>
+    <%= u.text_area :bio %><br>
+    <br>
+    <%= u.label :profile_picture %>
+    <%= u.file_field :profile_picture, accept: 'image/png,image/jpeg' %><br>
+
+    <br>
+    <%= u.label :password %>
+    <%= u.password_field :password %><br>
+    <br>
+    <%= u.label :password_confirmation %>
+    <%= u.password_field :password_confirmation %><br>
+    <br>
+    <%= u.submit %>
+<% end %>
