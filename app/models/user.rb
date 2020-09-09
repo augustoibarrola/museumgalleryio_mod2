@@ -5,6 +5,8 @@ class User < ApplicationRecord
     has_many :comments
     has_many :user_arts, through: :comments
 
+    has_one_attached :profile_picture
+
     #commented below out to test user / user_art
     has_secure_password
 end

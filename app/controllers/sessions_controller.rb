@@ -1,6 +1,6 @@
 
 class SessionsController < ApplicationController
-    skip_before_action :authorized, only: [:new, :log_in]
+    skip_before_action :authorized, only: [:new, :login]
     
     def new
     end
@@ -19,14 +19,18 @@ class SessionsController < ApplicationController
     end
 
     def login
+<<<<<<< HEAD
         user = User.find_by(email: params[:sessions][:email])
+=======
+        user = User.find_by(email: params[:session][:email])
+>>>>>>> master
 
-            # Authenticate a user by their password
+        # Authenticate a user by their password
         if user && user.authenticate(params[:session][:password])
             session[:user_id] = user.id
             redirect_to user_path(user)
         else 
-            flash[:error] = "Username or Password Incorrect"
+            flash[:error] = "Username or Password Incorrect 😨 "
             redirect_to new_login_path
         end  
     end
