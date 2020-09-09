@@ -29,12 +29,10 @@ ActiveRecord::Schema.define(version: 2020_09_08_191029) do
   end
 
   create_table "user_arts", force: :cascade do |t|
-    t.integer "art_id", null: false
     t.integer "user_id", null: false
     t.text "blurb"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["art_id"], name: "index_user_arts_on_art_id"
     t.index ["user_id"], name: "index_user_arts_on_user_id"
   end
 
@@ -50,6 +48,5 @@ ActiveRecord::Schema.define(version: 2020_09_08_191029) do
 
   add_foreign_key "comments", "user_arts"
   add_foreign_key "comments", "users"
-  add_foreign_key "user_arts", "arts"
   add_foreign_key "user_arts", "users"
 end
