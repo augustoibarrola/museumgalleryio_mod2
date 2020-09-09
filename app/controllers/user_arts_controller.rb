@@ -10,9 +10,8 @@ class UserArtsController < ApplicationController
     end
     
     def create
-        #@user_art_data = params["user_art"]
         @UserArt = UserArt.create(user_art_params)
-        byebug
+        #byebug
     end
 
     private

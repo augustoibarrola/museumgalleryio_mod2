@@ -40,3 +40,5 @@ Search.create(name: "title")
 #create test user
 User.create(name: "Sam", email: "samantha.lurio@gmail.com", bio: "test", profile_picture: "https://media13.s-nbcnews.com/i/MSNBC/Components/Video/201911/tdy_sat_baby_yoda_191123_1920x1080.jpg")
 
+#create test userart
+UserArt.create(blurb: "test", user: User.first, image: "test", url_link: "Test", title: "TEst")
