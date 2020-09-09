@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#logout', as: 'logout'
   post '/login', to: 'sessions#login', as: 'login'
   get '/sessions/new', to: 'sessions#new', as: 'new_login'
+
+  #facebook redirects users to this route in fb.user sessions
+  get '/auth/facebook/callback' => 'sessions#create'
+  #get '/auth/facebook/callback', to: 'sessions#create', as: 'facebook_login'
 end
 
