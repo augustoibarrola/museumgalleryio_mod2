@@ -13,6 +13,9 @@
 .row {
     display: flex;
     flex-wrap: wrap;
+    flex-flow: row;
+    height: 25%;
+    width: 50%;
 }
 
 .column {
@@ -22,10 +25,17 @@
     padding: 10px;
     margin: 10px;
 }
-.column img {
+/* .column image {
+    margin-top: 10%;
+    vertical-align: middle;
+    width: 1000px;
+    height: 1000px;
+} */
+
+.testimage {
     margin-top: 8px;
     vertical-align: middle;
-    width: 100%;
+    width: 6%
 }
 
 .brand_message {
