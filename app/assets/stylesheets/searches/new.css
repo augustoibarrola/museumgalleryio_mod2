@@ -14,14 +14,13 @@
     display: flex;
     flex-wrap: wrap;
     flex-flow: row;
-    height: 25%;
-    width: 50%;
+    height: 100%;
+    width: 100%;
 }
 
-.column {
-    display: flex;
-    flex-direction: row;
-    border-radius: 10px;
+.row > .column {
+    height: 25%;
+    width: 50%;
     padding: 10px;
     margin: 10px;
 }
@@ -32,10 +31,9 @@
     height: 1000px;
 } */
 
-.testimage {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 2%
+.column > .testimage {
+    max-width: 2%;
+    max-height: 5%;
 }
 
 .brand_message {
@@ -87,3 +85,4 @@ form {
     flex-direction: column;
     align-items: center;
 }
+
