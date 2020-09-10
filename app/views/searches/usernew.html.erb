@@ -1,0 +1,16 @@
+<div class="Search-Page">
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+<% end %>
+
+<h3 class="Search">Search and explore from the options below</h3>
+<%= form_tag("/user_search", method: "post") do %>
+  <%= label_tag(:q, "") %>
+  <%= text_field_tag(:q) %>
+
+  <%= select_tag :search_id, options_from_collection_for_select(Search.all, :id, :name, params[:search_id]) %>
+
+  <div class="Search-Button"><%= submit_tag("Search") %></div>
+<% end %>
+</div>

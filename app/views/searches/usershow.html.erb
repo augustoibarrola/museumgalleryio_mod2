@@ -1,0 +1,11 @@
+<h1><%= params['q'].capitalize %>:</h1>
+<% @objects.each do |object| %>
+  <h2> <a href=<%= object["url"]%> target="_blank"><%= object["title"] %></a>  </h2>
+  <% if !object["images"][0].nil? %>
+      <a href=<%=object["images"][0].first[1]["url"]%>>
+      <img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>>
+      </a>
+      <br>
+      <div class="button"><%= button_to "Add to Favorites", new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get  %></div>
+  <% end %>
+<% end %>

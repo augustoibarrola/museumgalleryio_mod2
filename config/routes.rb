@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get '/search', to: 'searches#new'
   post '/search', to: 'searches#show'
 
+  get '/user_search', to: 'searches#usernew'
+  post '/user_search', to: 'searches#usershow'
+  
+
   delete '/logout', to: 'sessions#logout', as: 'logout'
   post '/login', to: 'sessions#login', as: 'login'
   get '/sessions/new', to: 'sessions#new', as: 'new_login'
