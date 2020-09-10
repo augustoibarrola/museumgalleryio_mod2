@@ -18,3 +18,24 @@
 <%= submit_tag("Search") %>
 <% end %>
 </div>
+
+
+<div class="row">
+  <div class="column">
+    <a href=<%= @one["url"]%> class="image-1">
+      <div class="testimage"><img border="0" src=<%=@one["images"][0].first[1]["url"]%> ></div>
+    </a>
+ 
+      <a href=<%= @second["url"]%> class="image-two">
+      <div class="testimage"><img border="0" src=<%=@second["images"][0].first[1]["url"]%> ></div>
+    </a> 
+
+      <a href=<%= @third["url"]%> class="image-1">
+      <div class="testimage"><img border="0" src=<%=@third["images"][0].first[1]["url"]%>  ></div>
+    </a>  
+
+      <a href=<%= @fourth["url"]%> class="image-two">
+      <div class="testimage"><img border="0" src=<%=@fourth["images"][0].first[1]["url"]%>  ></div>
+    </a>
+  </div>
+</div>     
