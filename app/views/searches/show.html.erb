@@ -6,6 +6,6 @@
       <img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>>
       </a>
       <br>
-      <%= button_to "Add to Favorites", new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get  %>
+      <div class="button"><%= button_to "Add to Favorites", new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get  %></div>
   <% end %>
 <% end %>

@@ -6,7 +6,7 @@
 <div class="user-favorites">
     <% @current_user.favorites.each do |image| %>
         <a href=<%= user_art_path(image) %>>
-            <img src="<%= image["image"]%>">
+            <img src="<%= image["image"]%>" class="favorite-image">
         </a>
     <% end %>
 </div>

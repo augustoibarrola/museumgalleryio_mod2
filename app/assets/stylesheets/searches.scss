@@ -1,0 +1,75 @@
+
+.Search-Page{
+    padding: 50px 35px;
+    // box-sizing: border-box;
+    text-align: center;
+    // // display: flex;
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    margin: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+
+.Welcome-Message{
+    font-family: 'Barlow';
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-size: 14px; 
+    font-weight: 300px; 
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+.Brand-Message{
+    text-transform: uppercase;
+    font-family: 'Berlingske Serif';
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.Desc-Message{
+    // font-family: 'Barlow';
+    // font-size: 16px;
+    // font-weight: 500px;
+    // margin-bottom: 10px;
+    // line-height: 20px;
+    font-family: 'Barlow';
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase; 
+    font-size: 14px; 
+    font-weight: 500px; 
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+.Search-Button{
+    // background-color: rgba(0,0,0,.75);
+    // border: none;
+    // color: #fff;
+    // padding: 4px 16px;
+    // text-align: center;
+    // text-decoration: none;
+    // display: inline-block;
+    // font-size: 16px;
+    // font-weight: 400px;
+    // margin: 14px 2px;
+    // cursor: pointer;
+    background-color:rgba(0,0,0,.75);
+    border: none;
+    color: white;
+    padding: 4px 16px;
+    text-decoration: none;
+    margin: 14px 2px;
+    font-size: 16px;
+    font-weight: 400px;
+    cursor: pointer;
+   
+}

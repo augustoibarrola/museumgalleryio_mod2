@@ -10,16 +10,26 @@
   </head>
 
   <body>
-    <ul>
-      <li> <%# button_to "Your Profile", user_path(@current_user), method: :get %> </li>
-      <li><%= button_to "Log In", new_login_path, method: :get %> </li>
-      <li><%= button_to "Sign Up", new_user_path, method: :get %> </li>
-      <li> <%= button_to "Log Out", logout_path, method: :delete %> </li>
-      <li> <%= button_to "Find Favorites", root_path, method: :get %> </li>
-      <li> <%= button_to "Discover", users_path, method: :get %> </li>
+
+    <div class="banner">
+      <%= image_tag "logo.jpg", class:"banner-img" %>
+    </div>
+
+    <ul class="nav">
+      
+      <li class="left"> <%= link_to "Find Favorites", root_path %> </li>
+      <li class="left"> <%= link_to "Discover", users_path %> </li>
+      
+      <% if @current_user %>
+        <li class="left"> <%= link_to "Your Profile", user_path(@current_user), method: :get %> </li>
+        <li class="right"> Welcome <%= @current_user.name %>!</li>
+        <li class="right"> <%= link_to "Log Out", logout_path, method: :delete %> </li>
+      <% else %>
+      
+        <li class="right"><%= link_to "Log In", new_login_path %></li>
+        <li class="right"><%= link_to "Sign Up", new_user_path %></li>
+      <% end %>
     </ul>
-  <br>
-  <hr>
     <%= yield %>
   </body>
 </html>

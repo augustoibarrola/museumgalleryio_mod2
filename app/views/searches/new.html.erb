@@ -1,4 +1,7 @@
-<h1>Welcome to the Cooper Hewitt Collection Searcher!</h1>
+<div class="Search-Page">
+<h1 class="Welcome-Message">Welcome to</h1>
+<h1 class="Brand-Message">Galleryio</h1>
+<h1 class="Desc-Message">A Digital Museum</h1>
 
 <% if flash[:error] %>
   <%= flash[:error] %>
@@ -11,5 +14,6 @@
 
   <%= select_tag :search_id, options_from_collection_for_select(Search.all, :id, :name, params[:search_id]) %>
 
-  <%= submit_tag("Search") %>
+  <div class="Search-Button"><%= submit_tag("Search") %></div>
 <% end %>
+</div>
