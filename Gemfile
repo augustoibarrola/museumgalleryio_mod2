@@ -30,6 +30,7 @@ gem 'rest-client'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
