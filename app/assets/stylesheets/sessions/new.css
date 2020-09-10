@@ -1,0 +1,54 @@
+.logincontainer {
+    text-align: center;
+}
+
+h1 {
+    color: Black;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 45px; 
+    padding-bottom: 20px;   
+    padding-top: 10px;
+}   
+
+.login {
+    font-family: 'Barlow', sans-serif;
+}
+
+.loginlabel {
+    font-weight: 600px; 
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif;
+    padding-bottom: 15px;
+}
+
+
+
+input {
+    text-align: center;
+    width: 25%;
+    height: 35px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+
+}
+
+
+.submit_button {
+    text-align: center;
+    width: 25%;
+}
+
+.upload_button {
+    text-align: center;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.error_msgs {
+    color: red;
+    padding-bottom: 40px;
+    font-size: 25px;
+    font-family: 'Barlow', sans-serif
+}

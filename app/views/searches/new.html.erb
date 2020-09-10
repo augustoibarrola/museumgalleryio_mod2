@@ -1,19 +1,20 @@
-<div class="Search-Page">
-<h1 class="Welcome-Message">Welcome to</h1>
-<h1 class="Brand-Message">Galleryio</h1>
-<h1 class="Desc-Message">A Digital Museum</h1>
+<div class="search_bar">
+  <h1 class="welcome_message">Welcome to</h1>
+  <h1 class="brand_message">Gallery.io</h1>
+  <h1 class="brand_description">A Digital Museum</h1>
 
-<% if flash[:error] %>
-  <%= flash[:error] %>
-<% end %>
+  <% if flash[:error] %>
+    <%= flash[:error] %>
+  <% end %>
 
-<h3 class="Search">Search and explore from the options below</h3>
-<%= form_tag("/search", method: "post") do %>
-  <%= label_tag(:q, "") %>
-  <%= text_field_tag(:q) %>
+  <h2>Search Our Collection</h2>
 
-  <%= select_tag :search_id, options_from_collection_for_select(Search.all, :id, :name, params[:search_id]) %>
 
-  <div class="Search-Button"><%= submit_tag("Search") %></div>
-<% end %>
+  <%= form_tag("/search", method: "post") do %>
+    <%= label_tag(:q, "") %>
+    <%= text_field_tag(:q) %>
+    <%= select_tag :search_id, options_from_collection_for_select(Search.all, :id, :name, params[:search_id]) %><br>
+    <br>
+    <%= submit_tag("Search") %>
+  <% end %>
 </div>

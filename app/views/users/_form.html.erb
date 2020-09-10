@@ -1,29 +1,35 @@
-<% if flash[:errors] %>
-    <% flash[:errors].each do |e| %>
-    <%= e %>
+<div class="logincontainer">
+
+    <div class="error_msgs">
+        <% if flash[:errors] %>
+            <% flash[:errors].each do |e| %>
+            <%= e %>
+            <% end %>
+        <% end %>
+    </div>
+ 
+
+    <%= form_for @user do |u| %>
+        <div class="loginlabel"><%= u.label :name %></div>
+        <%= u.text_field :name %><br>
+        <br>
+        <div class="loginlabel"><%= u.label :email %></div>
+        <%= u.text_field :email %><br>
+        <br>
+        <div class="loginlabel"><%= u.label :bio %></div>
+        <%= u.text_area :bio %><br>
+        <br>
+        <div class="loginlabel"><%= u.label :Picture %></div>
+        <div class="upload_button"><%= u.file_field :profile_picture %><br></div>
+
+
+        <br>
+        <div class="loginlabel"><%= u.label :password %></div>
+        <%= u.password_field :password %><br>
+        <br>
+        <div class="loginlabel"><%= u.label :password_confirmation %></div>
+        <%= u.password_field :password_confirmation %><br>
+        <br>
+        <div class="submit_button"><%= u.submit "Submit" %></div>
     <% end %>
-<% end %>
-
-<%= form_for @user do |u| %>
-    <%= u.label :name %>
-    <%= u.text_field :name %><br>
-    <br>
-    <%= u.label :email %>
-    <%= u.text_field :email %><br>
-    <br>
-    <%= u.label :bio %>
-    <%= u.text_area :bio %><br>
-    <br>
-    <%= u.label :profile_picture %>
-    <%= u.file_field :profile_picture %><br>
-
-
-    <br>
-    <%= u.label :password %>
-    <%= u.password_field :password %><br>
-    <br>
-    <%= u.label :password_confirmation %>
-    <%= u.password_field :password_confirmation %><br>
-    <br>
-    <%= u.submit %>
-<% end %>
+</div>

@@ -40,4 +40,5 @@
 yarn-debug.log*
 .yarn-integrity
 
+#where facebook keys and cooper hewitt token are; must remain private! 
 .env

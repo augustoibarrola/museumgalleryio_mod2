@@ -6,13 +6,13 @@ class SearchesController < ApplicationController
 
     def show
         search_term = params['q'].capitalize
-        search_type = Search.find(params["search_id"]).name
-        if search_type == "artist"
+        search_type = Search.find(params['search_id']).name
+        if search_type == "Artist"
             search_type = "person"
         end
-        my_token = ENV["TOKEN"]
+        my_token = ENV['TOKEN']
         response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=100"
-        json = JSON.parse response 
+        json = JSON.parse(response)
 
         if !json['total'].zero?
             @objects = json['objects']

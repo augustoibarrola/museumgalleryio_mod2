@@ -1,4 +1,12 @@
 <%# Use profile picute class for css later%>
+<% if session[:user_id] %>
+<h1><%= @user.name %></h1>
+<h2>Email: <%= @user.email %></h2>
+<h2>Facebook UID: <%= @user.uid %></h2>
+<img src="<%= @user.profile_picture %>">
+
+<h3>Your Favorites</h3>
+
 <img src="<%= (url_for(@current_user.profile_picture)) %>" alt="<%= @current_user.name %> Profile Pic" class="profile-picture" width="700" height="600">
 <h2><%= @current_user.name  %></h2>
 <p class="user-bio"> <%= @current_user.bio %> </p>
