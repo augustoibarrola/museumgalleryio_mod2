@@ -4,7 +4,7 @@
 <p class="user-bio"> <%= @current_user.bio %> </p>
 <h3>Your Favorites</h3>
 <div class="user-favorites">
-    <% @current_user.favorites.each do |image| %>
+    <% @current_user.favorites.reverse.each do |image| %>
         <a href=<%= user_art_path(image) %>>
             <img src="<%= image["image"]%>" class="favorite-image">
         </a>

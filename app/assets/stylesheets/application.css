@@ -38,7 +38,7 @@
     display: block;
     position: sticky;
     left: calc((100% - 195px) / 2);
-    z-index: 100000;
+    z-index: 100000;    
   }
  
   /* Below creates navigation field with black line */
