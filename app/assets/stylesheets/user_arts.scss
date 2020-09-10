@@ -62,5 +62,23 @@
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 20px;
+.brand_description a {
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+
+}
+
+.image {
+    max-width: 40%;
+    max-height: 20%;
+    padding-bottom: 2%;
+}
+
+.discovered_art_medium { 
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif; 
+    font-style: italic;
+    opacity: 0.7;
+    padding-bottom: 4%;
     text-align: center;
 }
