@@ -1,5 +1,5 @@
 <%# Use profile picute class for css later%>
-<img src="<%= (url_for(@current_user.profile_picture)) %>" alt="<%= @current_user.name %> Profile Pic" class="profile-picture" width="700" height="600">
+<img src="<%= (url_for(@current_user.profile_picture)) %>" alt="<%= @current_user.name %> Profile Pic" class="profile-picture" width="400" height="300">
 <h2><%= @current_user.name  %></h2>
 <p class="user-bio"> <%= @current_user.bio %> </p>
 <h3>Your Favorites</h3>

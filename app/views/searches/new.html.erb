@@ -1,4 +1,4 @@
-<div class="Search-Page">
+<div class="Search-Section">
 <h1 class="Welcome-Message">Welcome to</h1>
 <h1 class="Brand-Message">Galleryio</h1>
 <h1 class="Desc-Message">A Digital Museum</h1>
@@ -16,20 +16,24 @@
 
   <div class="Search-Button"><%= submit_tag("Search") %></div>
 <% end %>
+</div>
 
-<div class="Homepage-Images">
+<div class="row">
+  <div class="column">
     <a href=<%= @one["url"]%> class="image-1">
-      <img class="image" border="0" src=<%=@one["images"][0].first[1]["url"]%> width="500" height="333" >
-    </a>  
+      <img class="image" border="0" src=<%=@one["images"][0].first[1]["url"]%> width="100%" >
+    </a>
+ 
       <a href=<%= @second["url"]%> class="image-two">
-      <img class="image" border="0" src=<%=@second["images"][0].first[1]["url"]%> width="500" height="333" >
+      <img class="image" border="0" src=<%=@second["images"][0].first[1]["url"]%> width="100%" >
     </a> 
 
       <a href=<%= @third["url"]%> class="image-1">
-      <img class="image" border="0" src=<%=@third["images"][0].first[1]["url"]%> width="500" height="333" >
+      <img class="image" border="0" src=<%=@third["images"][0].first[1]["url"]%> width="100%" >
     </a>  
 
       <a href=<%= @fourth["url"]%> class="image-two">
-      <img class="image" border="0" src=<%=@fourth["images"][0].first[1]["url"]%> width="500" height="333" >
-    </a>   
-</div>
+      <img class="image" border="0" src=<%=@fourth["images"][0].first[1]["url"]%> width="100%" >
+    </a>
+  </div>
+</div>     
