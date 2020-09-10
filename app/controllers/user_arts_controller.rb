@@ -1,5 +1,5 @@
 class UserArtsController < ApplicationController
-
+    skip_before_action :authorized, only: [:discover]
     def show
         @user_art = UserArt.find(params[:id])
         @comment = Comment.new
