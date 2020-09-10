@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
 
+  get '/discover', to: 'user_arts#discover'
+
   get '/view_other/:id', to: 'users#viewother', as: 'view_other'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'searches#new'
