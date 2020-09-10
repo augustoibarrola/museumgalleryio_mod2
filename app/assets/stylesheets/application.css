@@ -81,10 +81,6 @@
   .left {
     float: left;
   }
-/* 
-*= require_self
-*= require_tree 
-*/
 
 .tippytop {
     width: 100vw;

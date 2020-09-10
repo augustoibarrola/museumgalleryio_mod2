@@ -19,11 +19,12 @@
 
     <ul class="nav">
       
-      <% if @current_user %>
+        <% if @current_user %>
         <li class="left"> <%= link_to "Home", user_search_path %></li>
         <li class="left"> <%= link_to "Art Bench", users_path %> </li>
-        <li class="left"> <%= link_to "Discover", discover_path %> </li>
+        <li class="left"> <%= link_to "Discover", discovery_path %> </li>
         <li class="left"> <%= link_to "Profile", user_path(@current_user), method: :get %> </li>
+        
         <li class="right"> Welcome <%= @current_user.name %>!</li>
         <li class="right"> <%= link_to "Log Out", logout_path, method: :delete %> </li>
       <% else %>

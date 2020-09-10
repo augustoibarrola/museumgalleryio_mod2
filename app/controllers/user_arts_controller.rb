@@ -30,6 +30,16 @@ class UserArtsController < ApplicationController
         @art = object_json["object"]
     end
 
+    def logged_discover
+        my_token = ENV["TOKEN"]
+        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getOnDisplay&access_token=" + my_token
+        json = JSON.parse response 
+        object_id = json["objects"].sample["id"]
+        object_response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getInfo&access_token=#{my_token}&object_id=#{object_id}"
+        object_json = JSON.parse object_response
+        @art = object_json["object"]
+    end
+
     private
 
     def user_art_params

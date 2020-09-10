@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
 
   get '/discover', to: 'user_arts#discover'
+  get '/discovery', to: 'user_arts#logged_discover'
 
   get '/view_other/:id', to: 'users#viewother', as: 'view_other'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
