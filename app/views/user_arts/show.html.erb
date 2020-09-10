@@ -1,14 +1,22 @@
-<h1> Art Show Page </h1>
-<img src="<%= @user_art.image %>" alt="<%= @user_art.title %>" class="favorite-show-page">
+<div class="box">
+    <img src="<%= @user_art.image %>" alt="<%= @user_art.title %>" class="favorite-show-page">
+</div>
 
-<h4><%= @user_art["title"] %> </h4>
-<h5><%= @user_art["blurb"] %> </h5>
-<a href=<%= @user_art["url_link"] %>> More Info </a>
+<h4 class="title"><%= @user_art["title"] %> </h4>
+
+<div class="link">
+    <a href=<%= @user_art["url_link"] %> > 
+        More Info 
+    </a>
+</div>
+
+<h5 class="blurb"><%= @user_art["blurb"] %> </h5>
+
 
 <br>
-<h3> Comments </h3>
+<h3 class="comment"> Comments </h3>
 <% if @user_art.comments.empty? %>
-    <p>No Comments Yet :(</p>
+    <p class="no-comment">No Comments Yet :(</p>
 <% else %>
     <% @user_art.comments.each do |comment| %>
         <p> <%= link_to comment.user.name, view_other_path(comment.user) %> <%= comment.content %> </p>    

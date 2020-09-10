@@ -1,14 +1,21 @@
 <%# Use profile picute class for css later%>
-<h3>Your Profile</h3>
 
+<div class="box">
 <img src="<%= (url_for(@current_user.profile_picture)) %>" alt="<%= @current_user.name %> Profile Pic" class="profile-picture" width="400" height="300">
-<h2><%= @current_user.name  %></h2>
+</div>
+
+<h2 class="user-name"><%= @current_user.name  %></h2>
+
 <p class="user-bio"> <%= @current_user.bio %> </p>
-<h3>Your Favorites</h3>
+
+<h3 class="favorites">Your Favorites</h3>
+
 <div class="user-favorites">
     <% @current_user.favorites.reverse.each do |image| %>
-        <a href=<%= user_art_path(image) %>>
-            <img src="<%= image["image"]%>" class="favorite-image">
-        </a>
+        <div class ="user-image">
+            <a href=<%= user_art_path(image) %>>
+                <img src="<%= image["image"]%>" class="favorite-image">
+            </a>
+        </div>
     <% end %>
 </div>
