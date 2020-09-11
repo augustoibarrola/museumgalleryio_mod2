@@ -7,10 +7,14 @@
         <% @objects.each do |object| %>
           <div class="res_individual_container">
               <% if !object["images"][0].nil? %>
-                <div class="floating_art"><a href=<%= new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get%><img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>></a></div>
-                <br>
+                <div class="floating_art">
+                    <a href=<%=new_user_art_path%>><img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>></a>
+                    <div class="button">
+                        <%= button_to "Add to Favorites", new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get  %>
+                    </div>
+                </div>
               <% end %>
-            </div>
+          </div>
         <% end %>
       </div>
 

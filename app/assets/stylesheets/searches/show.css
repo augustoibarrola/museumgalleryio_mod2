@@ -13,23 +13,29 @@
 
 .res_individual_container > .floating_art {
     max-width: 100%;
-    max-height: auto%;
+    max-height: auto;
     justify-content: space-evenly;
     flex: auto auto auto;
 }
 
 .floating_art image {
-    max-width: 100%;
+    max-width: 80%;
     max-height: auto;
     opacity: 1;
     transition: .7s ease;
     backface-visibility: visible;
+   
 }
 
-.floating_art image .image {
+.floating_art > .image {
     object-fit: contain;
-}
+    text-align: center;
+}  
 
+.floating_art > .button  {
+    text-align: center;
+    
+}
 
 
 
