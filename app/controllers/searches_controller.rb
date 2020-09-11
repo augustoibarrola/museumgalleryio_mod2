@@ -47,11 +47,7 @@ class SearchesController < ApplicationController
             @objects = json['objects']
         else
             flash[:error] = "No results for #{search_term} :("
-<<<<<<< HEAD
             redirect_to '/'
-=======
-            redirect_to user_search_path
->>>>>>> 091020-augusto-sam-stellar-fixes
         end
     end
 

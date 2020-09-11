@@ -1,18 +1,4 @@
-<<<<<<< HEAD
 <h1><%= params['q'].capitalize %>:</h1>
-<% @objects.each do |object| %>
-  <h2> <a href=<%= object["url"]%> target="_blank"><%= object["title"] %></a>  </h2>
-  <% if !object["images"][0].nil? %>
-      <a href=<%=object["images"][0].first[1]["url"]%>>
-
-      <img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>>
-      </a>
-=======
-
-  <h1><%= params['q'].capitalize %></h1>
->>>>>>> 091020-augusto-sam-stellar-fixes
-      <br>
-      <br>
 
       <div class="results_container">
         <% @objects.each do |object| %>
