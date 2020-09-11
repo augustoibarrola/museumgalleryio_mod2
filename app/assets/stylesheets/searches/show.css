@@ -1,0 +1,37 @@
+.results_container {
+    display: flex;
+    width: 120%;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.results_container > .res_individual_container {
+    max-width: 50%;
+    max-height: auto;
+}
+
+.res_individual_container > .floating_art {
+    max-width: 100%;
+    max-height: auto%;
+    justify-content: space-evenly;
+    flex: auto auto auto;
+}
+
+.floating_art image {
+    max-width: 100%;
+    max-height: auto;
+    opacity: 1;
+    transition: .7s ease;
+    backface-visibility: visible;
+}
+
+.floating_art image .image {
+    object-fit: contain;
+}
+
+
+
+
+/* <h2><a href=<%= object["url"]%> target="_blank"><%= object["title"] %></a>  </h2> */
+/* <div class="button"><%= button_to "Add to Favorites", new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get  %></div> */

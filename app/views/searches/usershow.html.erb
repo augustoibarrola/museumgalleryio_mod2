@@ -1,4 +1,4 @@
-<h1><%= params['q'].capitalize %>:</h1>
+<h1><%= params['q'].capitalize %>:</h1> 
 <% @objects.each do |object| %>
   <h2> <a href=<%= object["url"]%> target="_blank"><%= object["title"] %></a>  </h2>
   <% if !object["images"][0].nil? %>

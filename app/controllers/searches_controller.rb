@@ -36,18 +36,18 @@ class SearchesController < ApplicationController
     def show
         search_term = params['q'].capitalize
         search_type = Search.find(params['search_id']).name
-        if search_type == "Artist"
+        if search_type == "artist"
             search_type = "person"
         end
         my_token = ENV['TOKEN']
-        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=100"
+        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=12"
         json = JSON.parse(response)
 
         if !json['total'].zero?
             @objects = json['objects']
         else
             flash[:error] = "No results for #{search_term} :("
-            render user_search_path
+            redirect_to user_search_path
         end
     end
 
