@@ -19,7 +19,10 @@
     <p class="no-comment">No Comments Yet :(</p>
 <% else %>
     <% @user_art.comments.each do |comment| %>
-        <p> <%= link_to comment.user.name, view_other_path(comment.user) %> <%= comment.content %> </p>    
+        <div class="follower-profile-link">
+            <%= link_to comment.user.name, view_other_path(comment.user), :class => "follower-link"%>
+            <span class="follower-comment"><%= comment.content %></span>    
+        </div>
     <% end %>
 <% end %>
 
