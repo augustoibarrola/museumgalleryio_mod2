@@ -7,8 +7,8 @@
 
 <p class="user-bio"> <%= @current_user.bio %> </p>
 
-<div class="user--button-container">
-    <%= button_to "Delete Profile", user_path(@current_user), method: :delete, :class => "user-delete-button" %>
+<div class="user-button-container">
+    <%= button_to "Delete Profile", user_path(@current_user), method: :delete, :class => "delete-button" %>
 </div>
 
 <h3 class="favorites">Your Favorites</h3>

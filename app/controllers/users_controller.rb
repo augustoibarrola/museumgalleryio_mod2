@@ -32,9 +32,8 @@ class UsersController < ApplicationController
     end
    
     def destroy
-        byebug
         @user = User.find(params[:id])
-        @user.destory
+        @user.destroy
 
         redirect_to '/'
     end

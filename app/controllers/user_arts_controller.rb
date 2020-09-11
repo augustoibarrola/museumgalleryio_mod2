@@ -40,6 +40,13 @@ class UserArtsController < ApplicationController
         @art = object_json["object"]
     end
 
+    def destroy
+        @user_art = UserArt.find(params[:id])
+        @user_art.destroy
+
+        redirect_to user_path(@current_user)
+    end
+
     private
 
     def user_art_params

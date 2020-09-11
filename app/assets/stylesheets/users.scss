@@ -36,6 +36,7 @@
     letter-spacing: 2px;
     line-height: 20px;
     text-align: center;
+    padding-bottom: 25px;
 }
 
 .favorites {
@@ -73,4 +74,20 @@
     margin-top: 8px;
     vertical-align: middle;
   width: 100%;
+}
+
+
+.delete-button {
+    font-size: 2vp;
+    font-family: 'Barlow', sans-serif;        
+    border: none;
+    opacity: 0.56;
+    transition: 0.3s;
+    height: 6vh;
+    width: 10vw;
+}
+
+.delete-button:hover {
+    background-color: #333;
+    color: white;
 }

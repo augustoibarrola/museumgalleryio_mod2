@@ -12,6 +12,11 @@
 
 <h5 class="blurb"><%= @user_art["blurb"] %> </h5>
 
+<% if @current_user == @user_art.user %>
+<div class="user-button-container">
+    <%= button_to "Delete Favorite", user_art_path(@user_art), method: :delete, :class => "delete-button" %>
+</div>
+<% end %>
 
 <br>
 <h3 class="comment"> Comments </h3>
@@ -39,3 +44,4 @@
         <%= f.submit "Create!" %>
     <% end %>
 <% end %>
+
