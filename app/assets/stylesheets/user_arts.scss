@@ -10,10 +10,19 @@
 }
 
 .link a {
-    font-family: "Barlow", san-serif;
-    font-size: 17px;
+    height: 30%;
+    width: 80%;
+    font-size: 19px;
+    border: none;
+    opacity: 0.56;
+    transition: 0.3s;
 }
 
+.link:hover{
+    cursor: pointer;
+    text-shadow: 1px 2px;
+    opacity: 1;
+}
 
 .box {
     background: #333;
@@ -52,20 +61,24 @@
 }
 
 .comment {
+    padding-left: 60px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
+    // text-align: center;
 }
 
 .no-comment {
+    padding-left: 60px;
     margin-top: 10px;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 20px;
 }
+
+
 
 .brand_description a {
     font-family: 'Barlow', sans-serif;
