@@ -60,11 +60,12 @@
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    padding: 0 4px;   
+    padding: 0 4px;
 }
 
 .column {
     display: flex;
+    flex: 1 0 25%;
     flex-direction: row;
     border-radius: 10px;
     padding: 10px;
@@ -73,7 +74,7 @@
 .column img {
     margin-top: 8px;
     vertical-align: middle;
-  width: 100%;
+
 }
 
 
