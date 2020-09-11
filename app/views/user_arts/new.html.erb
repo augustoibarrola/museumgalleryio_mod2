@@ -11,7 +11,7 @@
 <%= form_for @user_art do |f| %>
     <%= f.label "Write your blurb here" %>
     <br>
-    <%= f.text_area :blurb %>
+    <div class="loginlabel"><%= f.text_area :blurb %></div>
     <br>
 
     <%= f.hidden_field :image, value: @art_data["image"] %>

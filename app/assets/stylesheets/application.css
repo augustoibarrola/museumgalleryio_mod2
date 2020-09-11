@@ -61,9 +61,9 @@
  
   /* Below has hover color the links in nav field */
   ul.nav li:hover {
-   background-color: rgb(81, 211, 11);
    transition: 1s;
   }
+
  
   a {
     font-family: 'Barlow';
@@ -75,6 +75,7 @@
     font-weight: 300; 
     letter-spacing: 2px;
     line-height: 20px;
+    opacity: 0.56;
   }
  
   /* make links in nav on right stay right */
@@ -89,6 +90,12 @@
     font-weight: 300; 
     letter-spacing: 2px;
     line-height: 20px;
+  }
+
+  a:hover {
+        cursor: pointer;
+        text-shadow: 1px 1px;
+        opacity: 1;
   }
 
   .left {
@@ -120,7 +127,7 @@
 
     .button:hover {
         cursor: pointer;
-        text-shadow: 1px 2px;
+        text-shadow: 1px 1px;
         opacity: 1;
     }
     

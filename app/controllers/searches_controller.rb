@@ -40,14 +40,18 @@ class SearchesController < ApplicationController
             search_type = "person"
         end
         my_token = ENV['TOKEN']
-        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=100"
+        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=8"
         json = JSON.parse(response)
 
         if !json['total'].zero?
             @objects = json['objects']
         else
             flash[:error] = "No results for #{search_term} :("
+<<<<<<< HEAD
             redirect_to '/'
+=======
+            redirect_to user_search_path
+>>>>>>> 091020-augusto-sam-stellar-fixes
         end
     end
 
@@ -89,7 +93,7 @@ class SearchesController < ApplicationController
             search_type = "person"
         end
         my_token = ENV["TOKEN"]
-        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=100"
+        response = RestClient.get "https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=#{my_token}&#{search_type}=#{search_term}&page=1&per_page=8"
         json = JSON.parse response 
 
         if !json['total'].zero?

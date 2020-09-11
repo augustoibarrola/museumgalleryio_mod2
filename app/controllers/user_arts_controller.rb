@@ -6,12 +6,15 @@ class UserArtsController < ApplicationController
     end
 
     def new
+        # byebug
     @art_data = {
         "image" => params["image"],
         "url_link" => params["url_link"],
         "title" => params["title"]
     }
+    
     @user_art = UserArt.new
+
     end
     
     def create

@@ -1,14 +1,14 @@
 <div class="search-bar">
-  <h1 class="logged_in_brand_message">Gallery.io</h1>
-  <h1 class="logged_in_brand_description">A Digital Museum</h1>
-<h1 class="logged_in_welcome_message">Welcome back, <%= @current_user.name %></h1>
+<h1 class="welcome_message">Welcome back, <%= @current_user.name %></h1>
+  <h1 class="brand_message">Gallery.io</h1>
+  <h1 class="brand_description">A Digital Museum</h1>
 
 
 <% if flash[:error] %>
   <%= flash[:error] %>
 <% end %>
 
-<h2>Search and explore from the options below</h2>
+<h2>Explore from the options below</h2>
 <%= form_tag("/user_search", method: "post") do %>
   <%= label_tag(:q, "") %>
   <%= text_field_tag(:q) %>
@@ -17,6 +17,7 @@
 
 <%= submit_tag("Search") %>
 <% end %>
+
 </div>
 
 
