@@ -1,4 +1,3 @@
-<%# Use profile picute class for css later%>
 
 <div class="box">
 <img src="<%= (url_for(@current_user.profile_picture)) %>" alt="<%= @current_user.name %> Profile Pic" class="profile-picture" width="400" height="300">
@@ -7,6 +6,10 @@
 <h2 class="user-name"><%= @current_user.name  %></h2>
 
 <p class="user-bio"> <%= @current_user.bio %> </p>
+
+<div class="user--button-container">
+    <%= button_to "Delete Profile", user_path(@current_user), method: :delete, :class => "user-delete-button" %>
+</div>
 
 <h3 class="favorites">Your Favorites</h3>
 
