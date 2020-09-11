@@ -1,5 +1,5 @@
 
-  <h1><%= params['q'].capitalize %>:</h1>
+  <h1><%= params['q'].capitalize %></h1>
       <br>
       <br>
 
@@ -7,13 +7,11 @@
         <% @objects.each do |object| %>
           <div class="res_individual_container">
               <% if !object["images"][0].nil? %>
-                <div class="floating_art"><a href=<%=object["images"][0].first[1]["url"]%>><img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>></a></div>
+                <div class="floating_art"><a href=<%= new_user_art_path, params: {title: object["title"], url_link: object["url"], image: object["images"][0].first[1]["url"]}, method: :get%><img class="image" border="0" src=<%=object["images"][0].first[1]["url"]%>></a></div>
                 <br>
               <% end %>
             </div>
         <% end %>
       </div>
 
-      have the images appear on the results page(show page)
-      images are links
-      fade in effect with information on it 
+      
