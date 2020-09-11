@@ -47,7 +47,7 @@ class SearchesController < ApplicationController
             @objects = json['objects']
         else
             flash[:error] = "No results for #{search_term} :("
-            render user_search_path
+            redirect_to '/'
         end
     end
 
@@ -96,7 +96,7 @@ class SearchesController < ApplicationController
             @objects = json['objects']
         else
             flash[:error] = "No results for #{search_term} :("
-            redirect_to 
+            redirect_to user_search_path
         end
     end
 
