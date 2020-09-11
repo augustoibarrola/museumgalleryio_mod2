@@ -9,4 +9,7 @@ class User < ApplicationRecord
 
     #commented below out to test user / user_art
     has_secure_password
+
+    validates :email, uniqueness: true
+
 end
