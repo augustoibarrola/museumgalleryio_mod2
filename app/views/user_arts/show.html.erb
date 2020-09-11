@@ -19,13 +19,14 @@
     <p class="no-comment">No Comments Yet :(</p>
 <% else %>
     <% @user_art.comments.each do |comment| %>
-        <p> <%= link_to comment.user.name, view_other_path(comment.user) %> <%= comment.content %> </p>    
+     <%= link_to comment.user.name, view_other_path(comment.user), :class => "comment-link"%>
+    <span class="user-comment"><%= comment.content %> </span>
     <% end %>
 <% end %>
 
 <% if @user_art.user != @current_user %>
     <%= form_for @comment do |f| %>
-        <%= f.label "Write your comment here" %>
+        <div class="write-comment"><%= f.label "Write your comment here" %></div>
         <br>
         <%= f.text_area :content %>
         <br>

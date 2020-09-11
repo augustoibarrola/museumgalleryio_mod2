@@ -10,12 +10,14 @@
 
 <h3 class="favorites">Your Favorites</h3>
 
-<div class="user-favorites">
-    <% @current_user.favorites.reverse.each do |image| %>
-        <div class ="user-image">
-            <a href=<%= user_art_path(image) %>>
-                <img src="<%= image["image"]%>" class="favorite-image">
-            </a>
-        </div>
-    <% end %>
+<div class="row">
+    <div class="column">
+        <% @current_user.favorites.reverse.each do |image| %>
+            <div class ="user-image">
+                <a href=<%= user_art_path(image) %>>
+                    <div class="testimage"><img src="<%= image["image"]%>" class="favorite-image"></div>
+                </a>
+            </div>
+        <% end %>
+    </div>
 </div>

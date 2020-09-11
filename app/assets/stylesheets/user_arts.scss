@@ -2,16 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.no-comment {
-    text-align: center;
+.user-art-contatiner {
+    
 }
+
 .link {
     text-align: center;
 }
 
 .link a {
-    font-family: "Barlow", san-serif;
-    font-size: 17px;
+    height: 30%;
+    width: 80%;
+    font-size: 19px;
+    border: none;
+    opacity: 0.56;
+    transition: 0.3s;
+}
+
+.link:hover{
+    cursor: pointer;
+    text-shadow: 1px 2px;
+    opacity: 1;
 }
 
 
@@ -52,14 +63,16 @@
 }
 
 .comment {
+    padding-left: 60px;
     font-size: 24px;
     line-height: 30px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
+    // text-align: center;
 }
 
 .no-comment {
+    padding-left: 60px;
     margin-top: 10px;
     font-size: 20px;
     font-weight: 300;
@@ -87,3 +100,34 @@
     padding-bottom: 4%;
     text-align: center;
 }
+
+.user-link {
+    font-family: "Barlow", san-serif;
+    font-size: 23px;
+    font-weight: 400;
+}
+
+
+.user-comment {
+    padding-left: 0px;
+    font-family: "Barlow", san-serif;
+    font-size: 18px;
+}
+
+.comment-link{
+    margin: 60px;
+    height: 30%;
+    width: 80%;
+    font-size: 20px;
+    font-family: 'Barlow', sans-serif;        
+    border: none;
+    opacity: 0.56;
+    transition: 0.3s;
+}
+
+.comment-link:hover{
+    cursor: pointer;
+    text-shadow: 1px 2px;
+    opacity: 1;
+}
+

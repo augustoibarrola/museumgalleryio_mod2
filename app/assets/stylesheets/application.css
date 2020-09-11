@@ -13,119 +13,117 @@
  *= require_tree .
  *= require_self
  */
+ body {
+  font-family: 'Barlow';
+  color: black;
+  text-decoration: none;  
+  font-size: 12px; 
+  font-weight: 300; 
+  letter-spacing: 2px;
+  line-height: 20px;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
 
-  body {
-    font-family: 'Barlow';
-    color: black;
-    text-decoration: none;  
-    font-size: 12px; 
-    font-weight: 300; 
-    letter-spacing: 2px;
-    line-height: 20px;
-    padding-left: 18%;
-    padding-right: 18%;
-    padding-top: 5%;
-    padding-bottom: 10%;
-  }
 
- 
-  .banner {
-    max-width: 350px;
-    margin: 0 auto;
+.banner {
+  max-width: 350px;
+  margin: 0 auto;
 
-  }
- 
-  .banner-img {
-    height: 60px;
-    width: 60px;
-    margin: 0 auto;
-    display: block;
-    position: sticky;
-    left: calc((100% - 195px) / 2);
-    z-index: 100000;    
-  }
- 
-  /* Below creates navigation field with black line */
-  ul.nav {
-    height: 40px;
-    margin-bottom: 0px;
-    border-bottom: 0.5px solid black;
-   }
-   
-   /* Below formats the links in nav field */
-   ul.nav li {
-    line-height: 40px;
-    display: inline-block;
-    padding: 0px 20px;
-  }
- 
-  /* Below has hover color the links in nav field */
-  ul.nav li:hover {
-   background-color: rgb(81, 211, 11);
-   transition: 1s;
-  }
- 
-  a {
-    font-family: 'Barlow';
-    color: black;
-    text-decoration: none;
+}
 
-    text-transform: uppercase; 
-    font-size: 17px; 
-    font-weight: 300; 
-    letter-spacing: 2px;
-    line-height: 20px;
-  }
+.banner-img {
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  display: block;
+  position: sticky;
+  left: calc((100% - 195px) / 2);
+  z-index: 100000;    
+}
+
+/* Below creates navigation field with black line */
+ul.nav {
+  height: 40px;
+  margin-bottom: 0px;
+  border-bottom: 0.5px solid black;
+ }
  
-  /* make links in nav on right stay right */
-  .right {
-    float: right;
-    font-family: 'Barlow';
-    color: black;
-    text-decoration: none;
+ /* Below formats the links in nav field */
+ ul.nav li {
+  line-height: 40px;
+  display: inline-block;
+  padding: 0px 20px;
+}
 
-    text-transform: uppercase; 
-    font-size: 17px; 
-    font-weight: 300; 
-    letter-spacing: 2px;
-    line-height: 20px;
-  }
+/* Below has hover color the links in nav field */
+ul.nav li:hover {
+ background-color: rgb(81, 211, 11);
+ transition: 1s;
+}
 
-  .left {
-    float: left;
-  }
+a {
+  font-family: 'Barlow';
+  color: black;
+  text-decoration: none;
+
+  text-transform: uppercase; 
+  font-size: 17px; 
+  font-weight: 300; 
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+/* make links in nav on right stay right */
+.right {
+  float: right;
+  font-family: 'Barlow';
+  color: black;
+  text-decoration: none;
+
+  text-transform: uppercase; 
+  font-size: 17px; 
+  font-weight: 300; 
+  letter-spacing: 2px;
+  line-height: 20px;
+}
+
+.left {
+  float: left;
+}
 
 .tippytop {
-    width: 100vw;
-    height: 185px;
+  width: 100vw;
+  height: 185px;
 }
 .banner_container {
-        display: flex;
-        height: 185px;
-        width: 100vw;
-        background-color: #f2f2f2;
+      display: flex;
+      height: 185px;
+      width: 100vw;
+      background-color: #f2f2f2;
 }
 
-    .banner_container > .button {
-        margin: 60px;
-        height: 30%;
-        width: 100%;
-        font-size: 20px;
-        font-family: 'Barlow', sans-serif;        
-        border: none;
-        opacity: 0.56;
-        transition: 0.3s;
-    
-    }
+  .banner_container > .button {
+      margin: 60px;
+      height: 30%;
+      width: 100%;
+      font-size: 20px;
+      font-family: 'Barlow', sans-serif;        
+      border: none;
+      opacity: 0.56;
+      transition: 0.3s;
+  
+  }
 
-    .button:hover {
-        cursor: pointer;
-        text-shadow: 1px 2px;
-        opacity: 1;
-    }
-    
-    a:link {
-        text-decoration: none;
-        color: black
-    }
-   
+  .button:hover {
+      cursor: pointer;
+      text-shadow: 1px 2px;
+      opacity: 1;
+  }
+  
+  a:link {
+      text-decoration: none;
+      color: black
+  }
