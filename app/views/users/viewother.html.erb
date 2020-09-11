@@ -1,3 +1,4 @@
+
 <div class="box">
     <img src="<%= (url_for(@user.profile_picture)) %>" alt="<%= @user.name %> Profile Pic" class="profile-picture" width="400" height="300">
 </div>
@@ -8,12 +9,14 @@
 
 <h3 class="favorites">Favorites</h3>
 
-<div class="user-favorites">
-    <% @user.favorites.reverse.each do |image| %>
-        <div class ="user-image">
-            <a href=<%= user_art_path(image) %>>
-                <img src="<%= image.image %>">
-            </a>
-        </div>
-    <% end %>
+<div class="row">
+    <div class="column">
+        <% @user.favorites.reverse.each do |image| %>
+            <div class ="user-image">
+                <a href=<%= user_art_path(image) %>>
+                    <div class="testimage"><img src="<%= image.image %>"></div>
+                </a>
+            </div>
+        <% end %>
+    <div>
 </div>
