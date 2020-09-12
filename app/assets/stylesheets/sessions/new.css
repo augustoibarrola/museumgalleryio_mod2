@@ -49,6 +49,7 @@ input {
 .error_msgs {
     color: red;
     padding-bottom: 40px;
+    text-align: center;
     font-size: 25px;
     font-family: 'Barlow', sans-serif
 }

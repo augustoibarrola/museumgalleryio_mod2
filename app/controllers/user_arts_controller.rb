@@ -6,7 +6,7 @@ class UserArtsController < ApplicationController
     end
 
     def new
-        # byebug
+    
     @art_data = {
         "image" => params["image"],
         "url_link" => params["url_link"],
@@ -19,6 +19,7 @@ class UserArtsController < ApplicationController
     
     def create
         #@UserArt = UserArt.create(user_art_params)
+        
         @current_user.favorites << UserArt.create(user_art_params)
         redirect_to user_path(@current_user)
     end

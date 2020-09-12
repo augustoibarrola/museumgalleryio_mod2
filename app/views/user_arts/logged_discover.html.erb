@@ -7,5 +7,4 @@
       <img class="image" border="0" src=<%=@art["images"][0].first[1]["url"]%>>
       </a>
       <br>
-      <div class="button"><%= link_to "Add to Favorites", new_user_art_path, params: {title: @art["title"], url_link: @art["url"], image: @art["images"][0].first[1]}, method: :get  %></div>
-
+      <div class="button"><%= button_to "Add to Favorites", new_user_art_path, params: {title: @art["title"], url_link: @art["url"], image: @art["images"][0].first[1]["url"]}, method: :get  %></div>
